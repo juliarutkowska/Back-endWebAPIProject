@@ -1,0 +1,6 @@
+@MyFirstProject_HostAddress = http://localhost:5081
+
+GET {{MyFirstProject_HostAddress}}/learningsources/
+Accept: application/json
+
+###
