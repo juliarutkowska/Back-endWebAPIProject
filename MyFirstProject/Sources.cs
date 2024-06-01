@@ -9,4 +9,8 @@ public class Sources
     
     [Column("name")]
     public string Name { get; set; }
+    
+    [Column("displayName")]
+    public string DisplayName { get; set; }
+    
 }
