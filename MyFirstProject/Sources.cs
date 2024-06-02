@@ -10,7 +10,7 @@ public class Sources
     [Column("name")]
     public string Name { get; set; }
     
-    [Column("displayName")]
+    [Column("display_name")]
     public string DisplayName { get; set; }
     
 }

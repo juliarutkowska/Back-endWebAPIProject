@@ -30,7 +30,6 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-// Dodaj konfigurację CORS
 app.UseCors(options =>
 {
     options.AllowAnyOrigin()
