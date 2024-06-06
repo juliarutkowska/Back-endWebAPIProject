@@ -9,4 +9,5 @@ public class MyDbContext : DbContext
     }
 
     public DbSet<Sources> Sources { get; set; }
+    public DbSet<Time> Time { get; set; }
 }
