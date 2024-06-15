@@ -1,6 +1,7 @@
-namespace MyFirstProject;
-
 using Microsoft.EntityFrameworkCore;
+using MyFirstProject;
+
+namespace CodeLearningJourney.Infrastructure;
 
 public class MyDbContext : DbContext
 {

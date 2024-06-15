@@ -1,7 +1,6 @@
-﻿namespace MyFirstProject.Repositories;
-using MyFirstProject;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using MyFirstProject;
+
+namespace CodeLearningJourney.Infrastructure.Repositories;
 
 public interface ISourcesRepository
 {

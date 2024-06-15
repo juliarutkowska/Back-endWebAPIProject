@@ -1,6 +1,8 @@
+using CodeLearningJourney.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using MyFirstProject;
-using MyFirstProject.Repositories;
+
+namespace CodeLearningJourney.WebAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]

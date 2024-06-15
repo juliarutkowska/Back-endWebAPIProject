@@ -1,7 +1,9 @@
-﻿namespace MyFirstProject.Repositories;
+﻿using CodeLearningJourney.Infrastructure;
+using CodeLearningJourney.Infrastructure.Repositories;
+
+namespace MyFirstProject.Repositories;
 
 using Microsoft.EntityFrameworkCore;
-using MyFirstProject;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

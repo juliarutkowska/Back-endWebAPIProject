@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <RootNamespace>MyFirstProject</RootNamespace>
+        <RootNamespace>CodeLearningJourney.WebAPI</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,9 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+      <ProjectReference Include="..\CodeLearningJourney.Infrastructure\CodeLearningJourney.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

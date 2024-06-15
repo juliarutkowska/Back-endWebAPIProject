@@ -1,9 +1,8 @@
-﻿namespace MyFirstProject.Repositories;
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MyFirstProject;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using MyFirstProject.Repositories;
+
+namespace CodeLearningJourney.Infrastructure.Repositories;
 
 public class TimeRepository : ITimeRepository
 {
