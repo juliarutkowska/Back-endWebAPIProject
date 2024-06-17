@@ -1,11 +1,7 @@
-﻿using CodeLearningJourney.Infrastructure;
-using CodeLearningJourney.Infrastructure.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using MyFirstProject;
 
-namespace MyFirstProject.Repositories;
-
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+namespace CodeLearningJourney.Infrastructure.Repositories;
 
 public class SourcesRepository : ISourcesRepository
 {

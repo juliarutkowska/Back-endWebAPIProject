@@ -1,3 +1,4 @@
+using CodeLearningJourney.Infrastructure;
 using CodeLearningJourney.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using MyFirstProject;
@@ -34,14 +35,35 @@ public class LearningSourcesController : ControllerBase
     {
         try
         {
+            // Check if Name is null or empty
+            // If so, then set Name as DisplayName
+            if (string.IsNullOrEmpty(source.Name))
+            {
+                source.Name = source.DisplayName;
+            }
+
             await _repository.AddAsync(source);
             return CreatedAtAction(nameof(GetLearningSources), new { id = source.Id }, source);
         }
         catch (Exception ex)
         {
-            return StatusCode(500, $"Internal server error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex}");
         }
     }
+    
+    // [HttpPost]
+    // public async Task<IActionResult> AddLearningSource([FromBody] Sources source)
+    // {
+    //     try
+    //     {
+    //         await _repository.AddAsync(source);
+    //         return CreatedAtAction(nameof(GetLearningSources), new { id = source.Id }, source);
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         return StatusCode(500, $"Internal server error: {ex.Message}");
+    //     }
+    // }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateLearningSource(int id, [FromBody] Sources source)

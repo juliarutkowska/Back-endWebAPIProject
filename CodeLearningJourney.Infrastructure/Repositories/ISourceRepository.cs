@@ -1,6 +1,4 @@
-﻿using MyFirstProject;
-
-namespace CodeLearningJourney.Infrastructure.Repositories;
+﻿namespace CodeLearningJourney.Infrastructure.Repositories;
 
 public interface ISourcesRepository
 {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MyFirstProject;
+namespace CodeLearningJourney.Infrastructure;
 
 public class Sources
 {
