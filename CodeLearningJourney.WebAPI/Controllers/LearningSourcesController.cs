@@ -1,7 +1,6 @@
 using CodeLearningJourney.Infrastructure;
 using CodeLearningJourney.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using MyFirstProject;
 
 namespace CodeLearningJourney.WebAPI.Controllers;
 

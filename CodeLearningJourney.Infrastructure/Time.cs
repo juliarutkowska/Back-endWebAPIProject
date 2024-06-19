@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MyFirstProject;
+namespace CodeLearningJourney.Infrastructure;
 
 public class Time
 {
-    [Column("time")]
+    [Column("hours")]
     public int Times { get; set; }
     
     [Column("id")]

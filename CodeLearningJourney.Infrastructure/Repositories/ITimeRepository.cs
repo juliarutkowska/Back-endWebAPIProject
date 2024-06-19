@@ -1,13 +1,10 @@
-﻿namespace MyFirstProject.Repositories;
-using MyFirstProject;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿namespace CodeLearningJourney.Infrastructure.Repositories;
 
 public interface ITimeRepository
 {
     Task<List<Time>> GetAllAsync();
-    Task AddAsync(Time time);
-    Task UpdateAsync(Time time);
+    Task AddAsync(Time hours);
+    Task UpdateAsync(Time hours);
     Task<Time> GetByIdAsync(int id);
-    Task DeleteAsync(Time time);
+    Task DeleteAsync(Time hours);
 }

@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CodeLearningJourney.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
 using CodeLearningJourney.Infrastructure.Repositories;
-using MyFirstProject;
-using MyFirstProject.Repositories;
 
 namespace CodeLearningJourney.WebAPI.Controllers;
 
@@ -22,8 +21,8 @@ public class TimeController : ControllerBase
     {
         try
         {
-            var times = await _repository.GetAllAsync();
-            return Ok(times);
+            var hours = await _repository.GetAllAsync();
+            return Ok(hours);
         }
         catch (Exception ex)
         {
@@ -32,12 +31,12 @@ public class TimeController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddTime([FromBody] Time time)
+    public async Task<IActionResult> AddTime([FromBody] Time hours)
     {
         try
         {
-            await _repository.AddAsync(time);
-            return CreatedAtAction(nameof(GetTimes), new { id = time.Id }, time);
+            await _repository.AddAsync(hours);
+            return CreatedAtAction(nameof(GetTimes), new { id = hours.Id }, hours);
         }
         catch (Exception ex)
         {
@@ -46,16 +45,16 @@ public class TimeController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTime(int id, [FromBody] Time time)
+    public async Task<IActionResult> UpdateTime(int id, [FromBody] Time hours)
     {
         try
         {
-            if (id != time.Id)
+            if (id != hours.Id)
             {
                 return BadRequest("Id mismatch");
             }
 
-            await _repository.UpdateAsync(time);
+            await _repository.UpdateAsync(hours);
             return NoContent();
         }
         catch (Exception ex)
@@ -69,13 +68,13 @@ public class TimeController : ControllerBase
     {
         try
         {
-            var time = await _repository.GetByIdAsync(id);
-            if (time == null)
+            var hours = await _repository.GetByIdAsync(id);
+            if (hours == null)
             {
                 return NotFound();
             }
 
-            await _repository.DeleteAsync(time);
+            await _repository.DeleteAsync(hours);
             return NoContent();
         }
         catch (Exception ex)

@@ -2,8 +2,6 @@ using CodeLearningJourney.Infrastructure;
 using CodeLearningJourney.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using MyFirstProject;
-using MyFirstProject.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
